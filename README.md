@@ -1,2 +1,2 @@
-# ccp0
+# CPP 00
 Repositorio con mis primeros ejercicios en C++
