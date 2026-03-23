@@ -1,12 +1,10 @@
 #include <iostream>
 
-using namespace std;
-
 int main(int ac, char *av[])
 {
 	int i = 1;
 	if (ac < 2)
-		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	else
 	{
 		while(av[i])
@@ -14,14 +12,14 @@ int main(int ac, char *av[])
 			int j = 0;
 			while(av[i][j])
 			{
-				cout << (char)toupper(av[i][j]);
+				std::cout << (char)std::toupper(av[i][j]);
 				j++;
 			}
+			if (i < ac )
+				std::cout << " ";
 			i++;
-			if (i < ac - 1)
-				cout << " ";
 		}
 	}
-	cout << "\n";
+	std::cout << "\n";
 	return 0;
 }
