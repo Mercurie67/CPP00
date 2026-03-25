@@ -6,10 +6,11 @@
 /*   By: medel-ca <medel-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 17:30:46 by medel-ca          #+#    #+#             */
-/*   Updated: 2026/03/25 17:36:36 by medel-ca         ###   ########.fr       */
+/*   Updated: 2026/03/25 18:56:55 by medel-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #ifndef PHONE_BOOK_HPP
 #define PHONE_BOOK_HPP
 
@@ -33,4 +34,4 @@ class PhoneBook
 		~PhoneBook(){};
 } ;
 
-#endif
+#endif /* CONTACT_HPP */

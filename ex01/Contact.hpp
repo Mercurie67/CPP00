@@ -6,10 +6,11 @@
 /*   By: medel-ca <medel-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 17:30:38 by medel-ca          #+#    #+#             */
-/*   Updated: 2026/03/25 17:37:08 by medel-ca         ###   ########.fr       */
+/*   Updated: 2026/03/25 18:56:41 by medel-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 
@@ -38,4 +39,4 @@ class Contact
 		void setPhone_nbr(std::string phone_nbr) { this->phone_nbr = phone_nbr ;}
 		void setDrkst_s(std::string drkst_s) { this->drkst_s = drkst_s ;}
 } ;
-#endif
+#endif /* CONTACT_HPP */
