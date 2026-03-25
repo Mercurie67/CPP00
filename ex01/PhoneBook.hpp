@@ -1,18 +1,24 @@
+#ifndef PHONE_BOOK_HPP
+#define PHONE_BOOK_HPP
+
 #include <iostream>
 #include <string>
+#include "Contact.hpp"
+#include "utils.hpp"
 
-class PhoneBook
-{
+class PhoneBook {
+	
+	private:
+		Contact contact[8];
+		int total_contacts;
 	public:
-		void add_contact();
-		void search_contact();
+		void setTotal_contacts() ;
+		int getTotal_contacts() const { return total_contacts ; }
+		void add_contact(int index);
+		int display_table();
+		void display_contact(int index);
+		PhoneBook() : total_contacts(0) {}
+		~PhoneBook(){};
 } ;
 
-void PhoneBook::add_contact()
-{
-	;
-}
-void PhoneBook::search_contact()
-{
-
-}
+#endif
