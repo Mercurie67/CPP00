@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: medel-ca <medel-ca@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/25 17:30:18 by medel-ca          #+#    #+#             */
+/*   Updated: 2026/03/25 17:36:09 by medel-ca         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "PhoneBook.hpp"
 #include <iostream>
 #include <iomanip>
@@ -24,20 +36,21 @@ int PhoneBook::display_table()
 {
 	if(PhoneBook::getTotal_contacts() == 0)
 		return 0;
-	for (int i = 0; i <  getTotal_contacts(); i++) {
-		std::cout << "\033[32mThis are all your contacts\033[0m\n";
+	std::cout << "\033[32mThis are all your contacts:\033[0m\n";
+	for (int i = 0; i <  getTotal_contacts(); i++)
+	{
 		std::cout << std::setw(10) << i + 1 << " | ";
-	std::cout << std::setw(10) << format(contact[i].getFirstName()) << " | ";
-	std::cout << std::setw(10) << format(contact[i].getLastName()) << " | ";
-	std::cout << std::setw(10) << format(contact[i].getNickname()) << "\n";
+		std::cout << std::setw(10) << format(contact[i].getFirstName()) << " | ";
+		std::cout << std::setw(10) << format(contact[i].getLastName()) << " | ";
+		std::cout << std::setw(10) << format(contact[i].getNickname()) << "\n";
 	}
 	return 1;
 }
 void	PhoneBook::display_contact(int index)
 {
-	std::cout << "First Name: " << contact[index].getFirstName() << "\n";
+	std::cout << "\nFirst Name: " << contact[index].getFirstName() << "\n";
 	std::cout << "Last Name: " << contact[index].getLastName() << "\n";
 	std::cout << "Nickname: " << contact[index].getNickname() << "\n";
 	std::cout << "Phone number: " << contact[index].getPhone_nbr() << "\n";
-	std::cout << "Darkest secret: " << contact[index].getDrkst_s() << "\n";
+	std::cout << "Darkest secret: " << contact[index].getDrkst_s() << "\n\n";
 }

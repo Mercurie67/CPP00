@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: medel-ca <medel-ca@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/25 17:30:35 by medel-ca          #+#    #+#             */
+/*   Updated: 2026/03/25 17:42:22 by medel-ca         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "PhoneBook.hpp"
 #include <cstdlib>
 
@@ -11,7 +23,7 @@ int main()
 	int index = 0;
 	while(1)
 	{
-		std::cout << "What do you want to do?\nYou can ADD a contact, SEARCH for a contact or EXIT the phonebook\n";
+		std::cout << "What do you want to do?\nYou can \033[32mADD\033[0m a contact, \033[32mSEARCH\033[0m for a contact or \033[32mEXIT\033[0m the phonebook\n";
 		std::getline(std::cin, order);
 		if(order == "ADD")
 		{
@@ -22,9 +34,7 @@ int main()
 				index++;
 		}
 		else if(order == "SEARCH")
-		{
 			search_contact(phonebook);
-		}
 		else if (order == "EXIT")
 			break;
 		else
@@ -43,8 +53,12 @@ void search_contact(PhoneBook& phonebook)
     	do	{
        		std::cout << "What contact are you searching for? (1 to " << phonebook.getTotal_contacts() << "): ";
         	std::getline(std::cin, contact);
-        	if (is_number(contact)) 
+        	if (is_number(contact))
+			{
         		idx = std::atoi(contact.c_str()) - 1;
+				if(idx < 0 || idx >= phonebook.getTotal_contacts())
+					std::cout << "\033[31mError: Invalid index. Please enter a value between 1 and " << phonebook.getTotal_contacts() << "\033[0m\n";
+			}
 			else
 				std::cout << "\033[31mError: Invalid index. Please enter a value between 1 and " << phonebook.getTotal_contacts() << "\033[0m\n";
     	} while(idx < 0 || idx >= phonebook.getTotal_contacts());

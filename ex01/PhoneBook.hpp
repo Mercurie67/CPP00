@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: medel-ca <medel-ca@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/25 17:30:46 by medel-ca          #+#    #+#             */
+/*   Updated: 2026/03/25 17:36:36 by medel-ca         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PHONE_BOOK_HPP
 #define PHONE_BOOK_HPP
 
@@ -6,8 +18,8 @@
 #include "Contact.hpp"
 #include "utils.hpp"
 
-class PhoneBook {
-	
+class PhoneBook
+{
 	private:
 		Contact contact[8];
 		int total_contacts;

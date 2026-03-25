@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: medel-ca <medel-ca@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/03/25 17:30:38 by medel-ca          #+#    #+#             */
+/*   Updated: 2026/03/25 17:37:08 by medel-ca         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 
@@ -13,9 +25,7 @@ class Contact
 		std::string phone_nbr;
 		std::string drkst_s;
 	public:
-		Contact(){};
-		Contact(std::string name, std::string last, std::string nickn, std::string nmbr, std::string drk_s)
-		: first_name(name), last_name(last), nickname(nickn), phone_nbr(nmbr), drkst_s(drk_s){};
+		Contact(){};	
 		~Contact(){};
 		std::string getFirstName() const { return first_name ;}
 		std::string getLastName() const { return last_name ;}
