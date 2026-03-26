@@ -12,6 +12,11 @@
 #ifndef __ACCOUNT_H__
 #define __ACCOUNT_H__
 
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <functional>
+#include <ctime>
 // ************************************************************************** //
 //                               Account Class                                //
 // ************************************************************************** //
@@ -23,14 +28,14 @@ public:
 
 	typedef Account		t;
 
-	static int	getNbAccounts( void );
-	static int	getTotalAmount( void );
-	static int	getNbDeposits( void );
-	static int	getNbWithdrawals( void );
+	static int	getNbAccounts( void )  { return _nbAccounts ; } // métodos que pertenecen a la clase no a un objeto concreto
+	static int	getTotalAmount( void ) { return _totalAmount ; }
+	static int	getNbDeposits( void ) { return _totalNbDeposits ; }
+	static int	getNbWithdrawals( void ) { return _totalNbWithdrawals ; }
 	static void	displayAccountsInfos( void );
 
-	Account( int initial_deposit );
-	~Account( void );
+	Account( int initial_deposit ) ;
+	~Account( void ) ;
 
 	void	makeDeposit( int deposit );
 	bool	makeWithdrawal( int withdrawal );
@@ -40,7 +45,7 @@ public:
 
 private:
 
-	static int	_nbAccounts;
+	static int	_nbAccounts; // variables que pertenecen a la clase no a un objeto concreto
 	static int	_totalAmount;
 	static int	_totalNbDeposits;
 	static int	_totalNbWithdrawals;
@@ -54,9 +59,7 @@ private:
 
 	Account( void );
 
-};
-
-
+} ;
 
 // ************************************************************************** //
 // vim: set ts=4 sw=4 tw=80 noexpandtab:                                      //

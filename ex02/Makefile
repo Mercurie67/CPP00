@@ -1,9 +1,10 @@
 NAME = test
 
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -std=c++98
 
-SRC = test.cpp
+SRC = tests.cpp \
+	  Account.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
