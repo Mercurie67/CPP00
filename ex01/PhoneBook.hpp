@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: medel-ca <medel-ca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: medel-ca <medel-ca@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 17:30:46 by medel-ca          #+#    #+#             */
-/*   Updated: 2026/03/25 18:56:55 by medel-ca         ###   ########.fr       */
+/*   Updated: 2026/03/26 14:36:27 by medel-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ class PhoneBook
 		int total_contacts;
 	public:
 		void setTotal_contacts() ;
-		int getTotal_contacts() const { return total_contacts ; }
-		void add_contact(int index);
-		int display_table();
-		void display_contact(int index);
-		PhoneBook() : total_contacts(0) {}
-		~PhoneBook(){};
+		int getTotal_contacts() const ;
+		void add_contact(int index) ;
+		int display_table() ;
+		void display_contact(int index) ;
+		PhoneBook() ;
+		~PhoneBook() ;
 } ;
 
-#endif /* CONTACT_HPP */
+#endif /* PHONE_BOOK_HPP */

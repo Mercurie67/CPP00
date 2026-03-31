@@ -28,10 +28,10 @@ public:
 
 	typedef Account		t;
 
-	static int	getNbAccounts( void )  { return _nbAccounts ; } // métodos que pertenecen a la clase no a un objeto concreto
-	static int	getTotalAmount( void ) { return _totalAmount ; }
-	static int	getNbDeposits( void ) { return _totalNbDeposits ; }
-	static int	getNbWithdrawals( void ) { return _totalNbWithdrawals ; }
+	static int	getNbAccounts( void ); // métodos que pertenecen a la clase no a un objeto concreto
+	static int	getTotalAmount( void );
+	static int	getNbDeposits( void );
+	static int	getNbWithdrawals( void );
 	static void	displayAccountsInfos( void );
 
 	Account( int initial_deposit ) ;

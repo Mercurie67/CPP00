@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: medel-ca <medel-ca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: medel-ca <medel-ca@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 17:30:38 by medel-ca          #+#    #+#             */
-/*   Updated: 2026/03/25 18:56:41 by medel-ca         ###   ########.fr       */
+/*   Updated: 2026/03/26 14:36:16 by medel-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,15 @@ class Contact
 	public:
 		Contact(){};	
 		~Contact(){};
-		std::string getFirstName() const { return first_name ;}
-		std::string getLastName() const { return last_name ;}
-		std::string getNickname() const { return nickname ;}
-		std::string getPhone_nbr() const { return phone_nbr ;}
-		std::string getDrkst_s() const { return drkst_s ;}
-		void setFirstName(std::string first_name) { this->first_name = first_name ;}
-		void setLastName(std::string last_name) { this->last_name = last_name ;}
-		void setNickname(std::string nickname) { this->nickname = nickname ;}
-		void setPhone_nbr(std::string phone_nbr) { this->phone_nbr = phone_nbr ;}
-		void setDrkst_s(std::string drkst_s) { this->drkst_s = drkst_s ;}
+		std::string getFirstName() const ;
+		std::string getLastName() const ;
+		std::string getNickname() const ;
+		std::string getPhone_nbr() const ;
+		std::string getDrkst_s() const ;
+		void setFirstName(std::string first_name) ;
+		void setLastName(std::string last_name) ;
+		void setNickname(std::string nickname) ;
+		void setPhone_nbr(std::string phone_nbr) ;
+		void setDrkst_s(std::string drkst_s) ;
 } ;
 #endif /* CONTACT_HPP */

@@ -5,7 +5,8 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC = main.cpp \
 	  utils.cpp \
-	  PhoneBook.cpp 
+	  PhoneBook.cpp \
+	  Contact.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

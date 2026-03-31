@@ -3,24 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: medel-ca <medel-ca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: medel-ca <medel-ca@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 17:30:18 by medel-ca          #+#    #+#             */
-/*   Updated: 2026/03/25 17:36:09 by medel-ca         ###   ########.fr       */
+/*   Updated: 2026/03/26 14:42:24 by medel-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-#include <iostream>
 #include <iomanip>
 #include <cstdlib>
-#include <string>
+
+PhoneBook::PhoneBook() : total_contacts(0) {}
+PhoneBook::~PhoneBook() {};
 
 void PhoneBook::setTotal_contacts()
 { 
 	if (total_contacts < 8)
 		total_contacts++;
 }
+
+int PhoneBook::getTotal_contacts() const { return total_contacts ; }
+
 void PhoneBook::add_contact(int index)
 {
 	std::string input;

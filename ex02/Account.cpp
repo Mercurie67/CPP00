@@ -6,7 +6,7 @@
 /*   By: medel-ca <medel-ca@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 17:49:58 by medel-ca          #+#    #+#             */
-/*   Updated: 2026/03/26 12:23:41 by medel-ca         ###   ########.fr       */
+/*   Updated: 2026/03/26 14:34:13 by medel-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ int	Account::_nbAccounts = 0;
 int	Account::_totalAmount = 0;
 int	Account::_totalNbDeposits = 0;
 int	Account::_totalNbWithdrawals = 0;
+
+int	Account::getNbAccounts( void )  { return _nbAccounts ; } 
+int	Account::getTotalAmount( void ) { return _totalAmount ; }
+int	Account::getNbDeposits( void ) { return _totalNbDeposits ; }
+int	Account::getNbWithdrawals( void ) { return _totalNbWithdrawals ; }
 
 void	Account::_displayTimestamp( void ) {
 	std::time_t t = std::time(NULL);
