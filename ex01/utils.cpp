@@ -41,6 +41,16 @@ std::string format(std::string str)
 }
 
 
+int is_ascii(std::string str)
+{
+    for (size_t i = 0; i < str.size(); i++)
+    {
+        if(static_cast<unsigned char>(str[i]) > 127)
+            return 0;
+    }
+    return 1;
+}
+
 std::string read_nonempty_input(const std::string& prompt)
 {
     std::string input;
@@ -49,7 +59,9 @@ std::string read_nonempty_input(const std::string& prompt)
         std::getline(std::cin, input);
         if(input.empty())
             std::cout << "\033[31mYou can't save an empty field\033[0m\n";
-    } while(input.empty());
+        else if(!is_ascii(input))
+            std::cout << "\033[31mOnly ascii please\033[0m\n";
+    } while(input.empty() || !is_ascii(input));
     return input;
 }
 
