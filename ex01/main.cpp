@@ -24,8 +24,9 @@ int main()
 	while(1)
 	{
 		std::cout << "What do you want to do?\nYou can \033[32mADD\033[0m a contact, \033[32mSEARCH\033[0m for a contact or \033[32mEXIT\033[0m the phonebook\n";
-		std::getline(std::cin, order);
-		if(order == "ADD")
+		if(!std::getline(std::cin, order))
+			break;
+		else if(order == "ADD")
 		{
 			phonebook.add_contact(index);
 			if(index == 7)
